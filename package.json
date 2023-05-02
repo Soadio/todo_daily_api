@@ -1,0 +1,15 @@
+{
+  "name": "gomycode-intro_expressjs",
+  "version": "1.0.0",
+  "description": "A simple nodejs API server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Peter",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
