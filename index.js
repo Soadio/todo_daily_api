@@ -1,10 +1,11 @@
 import express from "express"
+import path from "path"
 import { users } from "./database.js"
 
 const app = express()
 
 app.get("/", (request, response) => {
-  return response.send("No data on this route. Please see /users and /todos")
+  return response.status(200).sendFile(path.join(process.cwd(), "index.html"))
 })
 
 app.get("/users", (request, response) => {
@@ -18,15 +19,15 @@ app.get("/users", (request, response) => {
 app.get("/users/:id", (request, response) => {
   const userId = request.params.id
   const user = users.find((element) => element.id === Number(userId))
-  console.log(user)
+
   if (user) {
-    return response.json({
+    return response.status(200).json({
       data: {
         user: user,
       },
     })
   } else {
-    return response.json({
+    return response.status(404).json({
       error: {
         code: 404,
         message: "User not found",

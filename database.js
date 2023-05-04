@@ -81,6 +81,7 @@ export const todos = [
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, ipsum. Inventore ipsam soluta tempore ducimus, voluptatibus officia ea maxime ratione fugiat quis dolore! Recusandae, laboriosam. Aspernatur vel eligendi ab modi?",
     createdAt: "Jan 15, 2025",
+    updatedAt: "Jan 15, 2025",
   },
   {
     id: 2,
@@ -89,6 +90,7 @@ export const todos = [
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, ipsum. Inventore ipsam soluta tempore ducimus, voluptatibus officia ea maxime ratione fugiat quis dolore! Recusandae, laboriosam. Aspernatur vel eligendi ab modi?",
     createdAt: "Jan 15, 2025",
+    updatedAt: "Jan 15, 2025",
   },
   {
     id: 3,
@@ -97,6 +99,7 @@ export const todos = [
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, ipsum. Inventore ipsam soluta tempore ducimus, voluptatibus officia ea maxime ratione fugiat quis dolore! Recusandae, laboriosam. Aspernatur vel eligendi ab modi?",
     createdAt: "Jan 15, 2025",
+    updatedAt: "Jan 15, 2025",
   },
   {
     id: 4,
@@ -105,6 +108,7 @@ export const todos = [
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, ipsum. Inventore ipsam soluta tempore ducimus, voluptatibus officia ea maxime ratione fugiat quis dolore! Recusandae, laboriosam. Aspernatur vel eligendi ab modi?",
     createdAt: "Jan 15, 2025",
+    updatedAt: "Jan 15, 2025",
   },
   {
     id: 5,
@@ -113,5 +117,6 @@ export const todos = [
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, ipsum. Inventore ipsam soluta tempore ducimus, voluptatibus officia ea maxime ratione fugiat quis dolore! Recusandae, laboriosam. Aspernatur vel eligendi ab modi?",
     createdAt: "Jan 15, 2025",
+    updatedAt: "Jan 15, 2025",
   },
 ]
