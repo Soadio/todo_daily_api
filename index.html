@@ -4,9 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test HTML</title>
+    <title>Welcome to Todo Daily API</title>
+
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+      }
+
+      li {
+        font-size: 24px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello World. File sent from our API</h1>
+    <h1>To perform CRUD operations, use the following endpoints:</h1>
+    <ul>
+      <li>GET <code>/users</code>: get all users</li>
+      <li>GET <code>/users/:id</code>: get a single users</li>
+      <li>POST <code>/users</code>: create a new user</li>
+      <li>PUT <code>/users/:id</code>: update a user</li>
+      <li>DELETE <code>/users/:id</code>: delete a user</li>
+    </ul>
   </body>
 </html>
