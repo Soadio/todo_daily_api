@@ -71,7 +71,7 @@ export const users = [
     address: "13A, Johnsons Str., Maryland",
     subscribed: true,
   },
-]
+];
 
 export const todos = [
   {
@@ -119,4 +119,4 @@ export const todos = [
     createdAt: "Jan 15, 2025",
     updatedAt: "Jan 15, 2025",
   },
-]
+];

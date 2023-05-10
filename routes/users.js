@@ -40,7 +40,7 @@ router.post("/", (request, response) => {
   const requiredInfos = ["name", "phone", "address"];
 
   requiredInfos.forEach((info) => {
-    if (!userDetails[info]) {
+    if (!Boolean(userDetails[info])) {
       return response.status(401).json({
         error: {
           code: 401,
@@ -61,7 +61,7 @@ router.post("/", (request, response) => {
     }
   });
 
-  const userId = users[users.length - 1].id + 1;
+  const userId = users.length ? users[users.length - 1].id + 1 : 1;
   const subscribed = false;
 
   const user = {
@@ -141,6 +141,7 @@ router.delete("/:id", (request, response) => {
   if (!user) {
     return response.status(404).json({
       error: {
+        success: false,
         code: 404,
         message: "User not found",
       },
