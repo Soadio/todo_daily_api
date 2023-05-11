@@ -7,7 +7,13 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URI);
+mongoose
+  .connect(process.env.MONGODB_URI, {
+    dbName: "todo-daily",
+  })
+  .then(() => {
+    console.log("Database connected successfully");
+  });
 
 const app = express();
 app.use(cors());
