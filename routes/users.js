@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { users } from "../database.js";
+import { User } from "../models/user.js";
 
 const router = Router();
 
@@ -37,7 +38,14 @@ router.get("/:id", (request, response) => {
 router.post("/", (request, response) => {
   const userDetails = request.body;
 
-  const requiredInfos = ["name", "phone", "address"];
+  const requiredInfos = [
+    "id",
+    "name",
+    "username",
+    "email",
+    "createdAt",
+    "updatedAt",
+  ];
 
   requiredInfos.forEach((info) => {
     if (!Boolean(userDetails[info])) {
@@ -61,18 +69,9 @@ router.post("/", (request, response) => {
     }
   });
 
-  const userId = users.length ? users[users.length - 1].id + 1 : 1;
-  const subscribed = false;
+  const user = new User(userDetails);
+  user.save();
 
-  const user = {
-    id: userId,
-    name: userDetails.name,
-    phone: userDetails.phone,
-    address: userDetails.address,
-    subscribed: subscribed,
-  };
-
-  users.push(user);
   return response.status(201).json({
     data: {
       code: 201,
