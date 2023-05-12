@@ -19,13 +19,41 @@ export async function createUser(data) {
 }
 
 export async function getUsers() {
-  return await User.find();
+  try {
+    return await User.find();
+  } catch (err) {
+    const error = new Error("Could not process request");
+    error.code = 400;
+    throw error;
+  }
+}
+
+export async function getUser(id) {
+  try {
+    return await User.findById(id);
+  } catch (err) {
+    const error = new Error("Could not find user");
+    error.code = 400;
+    throw error;
+  }
 }
 
 export async function updateUser(id, data) {
-  return await User.findByIdAndUpdate(id, data);
+  try {
+    return await User.findByIdAndUpdate(id, data);
+  } catch (err) {
+    const error = new Error("Could not process request");
+    error.code = 400;
+    throw error;
+  }
 }
 
 export async function deleteUser(id) {
-  return await User.deleteOne({ _id: id });
+  try {
+    return await User.deleteOne({ _id: id });
+  } catch (err) {
+    const error = new Error("Could not process request");
+    error.code = 400;
+    throw error;
+  }
 }

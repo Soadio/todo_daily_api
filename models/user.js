@@ -1,4 +1,4 @@
-import mongoose, { Schema, Types } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const userSchema = new Schema({
   name: { type: String, required: [true, "name property is required"] },
