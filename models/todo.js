@@ -1,9 +1,9 @@
-import mongoose, { Schema, Types } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const todoSchema = new Schema({
-  authorId: { type: Types.ObjectId, ref: "User" },
-  title: String,
-  body: String,
+  authorId: { type: String, required: [true, "authorId is required"] },
+  title: { type: String, required: [true, "title is required"] },
+  body: { type: String, required: [true, "body is required"] },
   deadline: Date,
   completed: Boolean,
   createdAt: { type: Date, default: Date.now },

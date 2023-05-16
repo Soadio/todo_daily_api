@@ -1,4 +1,4 @@
-import { Todo } from "../models/todo";
+import { Todo } from "../models/todo.js";
 
 // getTodos => get all todo items in the database for a user
 export async function getTodos(authorId) {
